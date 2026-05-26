@@ -1,0 +1,21 @@
+# Node dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-build/
+
+# Logs
+*.log
+build.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Ignore packaged installer artifacts
+*.exe
+*.exe.blockmap

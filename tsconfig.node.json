@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "types": ["node"],
+    "resolveJsonModule": true
+  },
+  "include": ["src/main/**/*", "src/shared/**/*"]
+  ,
+  "exclude": ["**/*.test.ts", "dist"]
+}
+

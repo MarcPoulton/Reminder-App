@@ -1,0 +1,54 @@
+{
+  "name": "reminder-app-electron",
+  "version": "1.0.0",
+  "main": "dist/main/main.js",
+  "description": "Desktop reminder app (Electron + React)",
+  "scripts": {
+    "dev:renderer": "vite --port 5173",
+    "dev:main-watch": "tsc -p tsconfig.node.json --watch",
+    "dev:electron": "wait-on -t 30000 http://localhost:5173 && electron dist/main/main.js",
+    "dev": "concurrently -k \"npm run dev:renderer\" \"npm run dev:main-watch\" \"npm run dev:electron\"",
+    "build:renderer": "vite build --outDir dist/renderer",
+    "build:main": "tsc -p tsconfig.node.json",
+    "build": "npm run build:renderer && npm run build:main",
+    "test": "vitest run",
+    "smoke:notify": "npm run build:main && electron dist/main/main.js --smoke-notify",
+    "make": "npm run build && electron-builder --win --publish never"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "com.reminder.app",
+    "productName": "Reminder App",
+    "directories": {
+      "output": "dist-build"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ]
+  },
+  "dependencies": {
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "better-sqlite3": "^12.10.0",
+    "concurrently": "^9.2.1",
+    "luxon": "^3.7.2",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "vite": "^8.0.14",
+    "wait-on": "^9.0.10"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/luxon": "^3.7.1",
+    "electron": "^41.7.0",
+    "electron-builder": "^26.8.1",
+    "electron-rebuild": "^3.2.9",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
