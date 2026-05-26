@@ -1,5 +1,5 @@
 Key commands to run
-From c:\Users\marcp\Documents\Coding Projects\Reminder App Electron:
+From c:\Users\...\Documents\Coding Projects\Reminder App Electron:
 
 Start dev:
 	npm run dev
