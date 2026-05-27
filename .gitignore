@@ -1,5 +1,9 @@
+# Node dependencies
+node_modules/
+
 # Build outputs
 dist-build/
+dist/
 
 # Logs
 *.log
