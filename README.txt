@@ -1,6 +1,8 @@
 Key commands to run
 From c:\Users\...\Documents\Coding Projects\Reminder App Electron:
 
+Install dependencies:
+	npm install
 Start dev:
 	npm run dev
 Run tests:
